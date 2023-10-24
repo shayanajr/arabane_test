@@ -1,5 +1,7 @@
+import 'package:arabane_test/profile_screen.dart';
 import 'package:arabane_test/variables/color-var.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class homeScreen extends StatefulWidget {
@@ -192,24 +194,28 @@ class _homeScreenState extends State<homeScreen> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 16.0),
-                          child: Text('السیار',style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold
-                          ),),
+                          child: Text(
+                            'السیار',
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
                         ),
-                        SizedBox(height: 60,),
+                        SizedBox(
+                          height: 60,
+                        ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('سیارات',style: TextStyle(
-                                color: Color(0xff969696)
-                              ),),
-                              Text('منذشهر',style: TextStyle(
-                                  color: Color(0xff969696)
-                        ),),
-
+                              Text(
+                                'سیارات',
+                                style: TextStyle(color: Color(0xff969696)),
+                              ),
+                              Text(
+                                'منذشهر',
+                                style: TextStyle(color: Color(0xff969696)),
+                              ),
                             ],
                           ),
                         )
@@ -231,7 +237,12 @@ class _homeScreenState extends State<homeScreen> {
                 ],
               ),
             ),
-          )
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Get.to(ProfileScreen());
+              },
+              child: Text('حساب من')),
         ],
       ),
     );

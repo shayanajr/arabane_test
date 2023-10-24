@@ -9,6 +9,7 @@ class ColorVar {
   Color get secondaryColor => const Color(0xffF5791F);
   Color get bordertextfieldColor => const Color(0xffADADAD);
   Color get errorColor => const Color(0xffED4C67);
+  Color get LighterrorColor => const Color(0x10ED4C67);
   Color get white => Colors.white;
   Color get backCard => const Color.fromRGBO(255, 255, 255, 0.4);
 
