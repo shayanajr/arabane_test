@@ -32,16 +32,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             children: [
-              ProfileHeader(),
-              ProfileHeader_Logged(ontap: () {
+              profileHeader(),
+              profileHeader_Logged(ontap: () {
                 Get.bottomSheet(
-                  CustomBottomSheet(),
+                  customBottomSheet(),
                 );
               }),
               SizedBox(
                 height: 25,
               ),
-              BoxItems(),
+              boxItems(),
               SizedBox(
                 height: 25,
               )
@@ -53,7 +53,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 }
 
-Widget ProfileHeader() {
+Widget profileHeader() {
   return Stack(
     children: [
       Padding(
@@ -123,7 +123,7 @@ Widget ProfileHeader() {
   );
 }
 
-Widget BoxItems() {
+Widget boxItems() {
   return Container(
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(30),
@@ -141,23 +141,23 @@ Widget BoxItems() {
       padding: const EdgeInsets.symmetric(horizontal: 23.0, vertical: 13),
       child: Column(
         children: [
-          ProfileItem(title: 'اعلاناتی', icon: Iconsax.user),
-          ProfileItem(title: 'الاعلانات المحفوظه', icon: Iconsax.save_2),
-          ProfileItem(title: 'شاهدت اخیرا', icon: Icons.history),
-          ProfileItem(title: 'حقوق الاشتراک الخاصه بی', icon: Iconsax.card),
-          ProfileItem(title: 'مکتب عقاری', icon: Iconsax.shop),
-          ProfileItem(
+          profileItem(title: 'اعلاناتی', icon: Iconsax.user),
+          profileItem(title: 'الاعلانات المحفوظه', icon: Iconsax.save_2),
+          profileItem(title: 'شاهدت اخیرا', icon: Icons.history),
+          profileItem(title: 'حقوق الاشتراک الخاصه بی', icon: Iconsax.card),
+          profileItem(title: 'مکتب عقاری', icon: Iconsax.shop),
+          profileItem(
               title: 'المستشارین العقاربین', icon: Iconsax.receipt_item),
-          ProfileItem(title: 'حولنا', icon: Iconsax.info_circle),
-          ProfileItem(title: 'التواصل معنا', icon: Iconsax.messages_2),
-          ProfileItem(title: 'الاحکام و الشروط', icon: Iconsax.security_user),
+          profileItem(title: 'حولنا', icon: Iconsax.info_circle),
+          profileItem(title: 'التواصل معنا', icon: Iconsax.messages_2),
+          profileItem(title: 'الاحکام و الشروط', icon: Iconsax.security_user),
         ],
       ),
     ),
   );
 }
 
-Widget ProfileItem({required String title, required IconData icon}) {
+Widget profileItem({required String title, required IconData icon}) {
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 15.0),
     child: InkWell(
@@ -193,7 +193,7 @@ Widget ProfileItem({required String title, required IconData icon}) {
   );
 }
 
-Widget ProfileHeader_Logged({required VoidCallback ontap}) {
+Widget profileHeader_Logged({required VoidCallback ontap}) {
   return Stack(
     children: [
       Padding(
@@ -301,7 +301,7 @@ Widget ProfileHeader_Logged({required VoidCallback ontap}) {
   );
 }
 
-Widget CustomBottomSheet() {
+Widget customBottomSheet() {
   return Container(
     width: double.infinity,
     height: 460,
