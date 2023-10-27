@@ -1,3 +1,4 @@
+import 'package:arabane_test/add_realstate.dart';
 import 'package:arabane_test/variables/color-var.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -34,10 +35,12 @@ class _RealStateState extends State<RealState> {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left:75.0),
-                    child: IconButton(onPressed: () {
-                      Get.back();
-                    }, icon: Icon(Iconsax.arrow_right_1)),
+                    padding: const EdgeInsets.only(left: 75.0),
+                    child: IconButton(
+                        onPressed: () {
+                          Get.back();
+                        },
+                        icon: Icon(Iconsax.arrow_right_1)),
                   ),
                   Text(
                     'المستشارین العقاربین',
@@ -56,13 +59,13 @@ class _RealStateState extends State<RealState> {
                         child: SearchBar(
                             hintText: 'البحث عن...',
                             backgroundColor: MaterialStateProperty.resolveWith(
-                                    (states) => Color(0xffE7FAFD)),
-                            elevation:
-                            MaterialStateProperty.resolveWith((states) => 5),
+                                (states) => Color(0xffE7FAFD)),
+                            elevation: MaterialStateProperty.resolveWith(
+                                (states) => 5),
                             shadowColor: MaterialStateProperty.resolveWith(
-                                    (states) => Colors.black26),
+                                (states) => Colors.black26),
                             surfaceTintColor: MaterialStateProperty.resolveWith(
-                                    (states) => Color(0xffE7FAFD)),
+                                (states) => Color(0xffE7FAFD)),
                             padding: const MaterialStatePropertyAll<EdgeInsets>(
                                 EdgeInsets.symmetric(horizontal: 20.0)),
                             leading: Icon(Iconsax.search_normal_1),
@@ -90,7 +93,7 @@ class _RealStateState extends State<RealState> {
                           'تحدید الموقع',
                           style: TextStyle(
                             color:
-                            isSelected ? Colors.black : Color(0xff7B7B7B),
+                                isSelected ? Colors.black : Color(0xff7B7B7B),
                           ),
                         ),
                         SizedBox(
@@ -103,7 +106,7 @@ class _RealStateState extends State<RealState> {
                       color: Color(0xffCDCDCD),
                     ),
                     backgroundColor:
-                    isSelected ? colors.lightprimaryColor : Colors.white,
+                        isSelected ? colors.lightprimaryColor : Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -115,16 +118,19 @@ class _RealStateState extends State<RealState> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
-        child: Icon(Iconsax.add,color: colors.primaryColor,),
-     backgroundColor: colors.lightprimaryColor,
+        onPressed: () {
+          Get.to(AddRealstate());
+        },
+        child: Icon(
+          Iconsax.add,
+          color: colors.primaryColor,
+        ),
+        backgroundColor: colors.lightprimaryColor,
       ),
       body: Center(
         child: Text(
-          'لا یوجد مکتب عقار مفعل حالیا.',style: TextStyle(
-          fontSize: 20,
-          color: Color(0xff767676)
-        ),
+          'لا یوجد مکتب عقار مفعل حالیا.',
+          style: TextStyle(fontSize: 20, color: Color(0xff767676)),
         ),
       ),
     );
