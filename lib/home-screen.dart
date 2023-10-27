@@ -1,3 +1,4 @@
+import 'package:arabane_test/chat_list.dart';
 import 'package:arabane_test/new_ad.dart';
 import 'package:arabane_test/profile_screen.dart';
 import 'package:arabane_test/variables/color-var.dart';
@@ -243,7 +244,7 @@ class _homeScreenState extends State<homeScreen> {
               onPressed: () {
                 Get.to(ProfileScreen());
               },
-              child: Text('حساب من')),
+              child: Text('حسابی')),
           ElevatedButton(
               onPressed: () {
                 Get.to(ProfileScreen());
@@ -254,6 +255,11 @@ class _homeScreenState extends State<homeScreen> {
                 Get.to(NewAd());
               },
               child: Text('تسجیل اعلان ')),
+          ElevatedButton(
+              onPressed: () {
+                Get.to(ChatList());
+              },
+              child: Text('دردشه ')),
         ],
       ),
     );
