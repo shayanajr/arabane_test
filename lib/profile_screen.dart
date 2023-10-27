@@ -1,4 +1,5 @@
 import 'package:arabane_test/my_ads.dart';
+import 'package:arabane_test/real_state.dart';
 import 'package:arabane_test/variables/color-var.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -150,7 +151,9 @@ Widget boxItems() {
           profileItem(title: 'حقوق الاشتراک الخاصه بی', icon: Iconsax.card, ontap: () {  }),
           profileItem(title: 'مکتب عقاری', icon: Iconsax.shop, ontap: () {  }),
           profileItem(
-              title: 'المستشارین العقاربین', icon: Iconsax.receipt_item, ontap: () {  }),
+              title: 'المستشارین العقاربین', icon: Iconsax.receipt_item, ontap: () {
+                Get.to(RealState());
+          }),
           profileItem(title: 'حولنا', icon: Iconsax.info_circle, ontap: () {  }),
           profileItem(title: 'التواصل معنا', icon: Iconsax.messages_2, ontap: () {  }),
           profileItem(title: 'الاحکام و الشروط', icon: Iconsax.security_user, ontap: () {  }),
