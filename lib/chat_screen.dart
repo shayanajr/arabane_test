@@ -77,7 +77,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     decoration: InputDecoration(
                         contentPadding: EdgeInsets.only(right: 20,top: 10),
                         hintText: "اکتب رساله ...",
-                        hintStyle: TextStyle(color: colors.primaryColor,fontSize: 16),
+                        hintStyle: TextStyle(color: colors.primaryColor),
                         border: InputBorder.none,
                         suffixIcon: Padding(
                           padding: const EdgeInsets.only(left:20.0),
