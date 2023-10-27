@@ -1,3 +1,4 @@
+import 'package:arabane_test/my_ads.dart';
 import 'package:arabane_test/variables/color-var.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -141,27 +142,29 @@ Widget boxItems() {
       padding: const EdgeInsets.symmetric(horizontal: 23.0, vertical: 13),
       child: Column(
         children: [
-          profileItem(title: 'اعلاناتی', icon: Iconsax.user),
-          profileItem(title: 'الاعلانات المحفوظه', icon: Iconsax.save_2),
-          profileItem(title: 'شاهدت اخیرا', icon: Icons.history),
-          profileItem(title: 'حقوق الاشتراک الخاصه بی', icon: Iconsax.card),
-          profileItem(title: 'مکتب عقاری', icon: Iconsax.shop),
+          profileItem(title: 'اعلاناتی', icon: Iconsax.user, ontap: () {
+            Get.to(MyAds());
+          }),
+          profileItem(title: 'الاعلانات المحفوظه', icon: Iconsax.save_2, ontap: () {  }),
+          profileItem(title: 'شاهدت اخیرا', icon: Icons.history, ontap: () {  }),
+          profileItem(title: 'حقوق الاشتراک الخاصه بی', icon: Iconsax.card, ontap: () {  }),
+          profileItem(title: 'مکتب عقاری', icon: Iconsax.shop, ontap: () {  }),
           profileItem(
-              title: 'المستشارین العقاربین', icon: Iconsax.receipt_item),
-          profileItem(title: 'حولنا', icon: Iconsax.info_circle),
-          profileItem(title: 'التواصل معنا', icon: Iconsax.messages_2),
-          profileItem(title: 'الاحکام و الشروط', icon: Iconsax.security_user),
+              title: 'المستشارین العقاربین', icon: Iconsax.receipt_item, ontap: () {  }),
+          profileItem(title: 'حولنا', icon: Iconsax.info_circle, ontap: () {  }),
+          profileItem(title: 'التواصل معنا', icon: Iconsax.messages_2, ontap: () {  }),
+          profileItem(title: 'الاحکام و الشروط', icon: Iconsax.security_user, ontap: () {  }),
         ],
       ),
     ),
   );
 }
 
-Widget profileItem({required String title, required IconData icon}) {
+Widget profileItem({required String title, required IconData icon,required VoidCallback ontap}) {
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 15.0),
     child: InkWell(
-      onTap: () {},
+      onTap: ontap,
       child: Container(
         color: Colors.white,
         child: Row(
