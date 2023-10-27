@@ -1,5 +1,6 @@
 import 'package:arabane_test/my_ads.dart';
 import 'package:arabane_test/real_state.dart';
+import 'package:arabane_test/realstate_office.dart';
 import 'package:arabane_test/variables/color-var.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -149,7 +150,9 @@ Widget boxItems() {
           profileItem(title: 'الاعلانات المحفوظه', icon: Iconsax.save_2, ontap: () {  }),
           profileItem(title: 'شاهدت اخیرا', icon: Icons.history, ontap: () {  }),
           profileItem(title: 'حقوق الاشتراک الخاصه بی', icon: Iconsax.card, ontap: () {  }),
-          profileItem(title: 'مکتب عقاری', icon: Iconsax.shop, ontap: () {  }),
+          profileItem(title: 'مکتب عقاری', icon: Iconsax.shop, ontap: () {
+            Get.to(RealstateOffice());
+          }),
           profileItem(
               title: 'المستشارین العقاربین', icon: Iconsax.receipt_item, ontap: () {
                 Get.to(RealState());
