@@ -1,4 +1,5 @@
 import 'package:arabane_test/chat_list.dart';
+import 'package:arabane_test/filter_screen.dart';
 import 'package:arabane_test/new_ad.dart';
 import 'package:arabane_test/profile_screen.dart';
 import 'package:arabane_test/variables/color-var.dart';
@@ -66,6 +67,9 @@ class _homeScreenState extends State<homeScreen> {
               Row(
                 children: [
                   RawChip(
+                    onPressed: (){
+                      Get.to(FilterScreen());
+                    },
                     label: Row(
                       children: [
                         Icon(
@@ -245,11 +249,6 @@ class _homeScreenState extends State<homeScreen> {
                 Get.to(ProfileScreen());
               },
               child: Text('حسابی')),
-          ElevatedButton(
-              onPressed: () {
-                Get.to(ProfileScreen());
-              },
-              child: Text('صفحه خالی')),
           ElevatedButton(
               onPressed: () {
                 Get.to(NewAd());
