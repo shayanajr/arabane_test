@@ -1,3 +1,4 @@
+import 'package:arabane_test/new_ad.dart';
 import 'package:arabane_test/profile_screen.dart';
 import 'package:arabane_test/variables/color-var.dart';
 import 'package:flutter/material.dart';
@@ -243,6 +244,16 @@ class _homeScreenState extends State<homeScreen> {
                 Get.to(ProfileScreen());
               },
               child: Text('حساب من')),
+          ElevatedButton(
+              onPressed: () {
+                Get.to(ProfileScreen());
+              },
+              child: Text('صفحه خالی')),
+          ElevatedButton(
+              onPressed: () {
+                Get.to(NewAd());
+              },
+              child: Text('تسجیل اعلان ')),
         ],
       ),
     );

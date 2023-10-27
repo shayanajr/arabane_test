@@ -12,6 +12,6 @@ class ColorVar {
   Color get LighterrorColor => const Color(0x10ED4C67);
   Color get white => Colors.white;
   Color get backCard => const Color.fromRGBO(255, 255, 255, 0.4);
-
+  Color get DividerColor => const Color(0xffE2E2E2);
 
 }
